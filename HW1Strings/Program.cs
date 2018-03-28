@@ -11,7 +11,7 @@ namespace HW1Strings
             string example = Console.ReadLine();
             while (example.Contains("  "))
             {
-                example = example.Replace("  ", " ");
+                example = example.Replace("  "," ");
             }
 
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
