@@ -16,7 +16,6 @@ namespace HW1Strings
             }
 
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
-
             string[] words = example.Split(new char[] { ' ' });
             for (int i = 0; i < words.Length; i++)
             {
