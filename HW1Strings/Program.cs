@@ -9,7 +9,6 @@ namespace HW1Strings
         {
             Console.WriteLine("Print some letters:");
             string example = Console.ReadLine();
-
             while (example.Contains("  "))
             {
                 example = example.Replace("  ", " ");
