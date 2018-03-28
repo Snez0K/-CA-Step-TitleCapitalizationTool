@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace HW1Strings
@@ -14,17 +15,19 @@ namespace HW1Strings
                 example = example.Replace("  "," ");
             }
 
+            List<string> list = new List<string>(new string[] {
+            "A", "For", "Upon", "After",
+            "Over", "About", "At", "During", "Over",
+            "In", "On", "Till", "Within", "At", "By"});
+
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
             string[] words = example.Split(new char[] { ' ' });
             for (int i = 0; i < words.Length; i++)
             {
-                if (words[i].Equals("A") || words[i].Equals("For") || words[i].Equals("Upon") ||
-                    words[i].Equals("After") || words[i].Equals("Over") || words[i].Equals("About") ||
-                    words[i].Equals("At") || words[i].Equals("During") || words[i].Equals("Over") ||
-                    words[i].Equals("In") || words[i].Equals("On") || words[i].Equals("Till") ||
-                    words[i].Equals("Within") || words[i].Equals("At") || words[i].Equals("By"))
+                foreach (string ToCheck in list)
                 {
-                    words[i] = words[i].ToLower();
+                    if (words[i].Equals(ToCheck))
+                        words[i] = words[i].ToLower();
                 }
             }
             example = (string.Join(" ", words));
