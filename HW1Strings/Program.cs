@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Globalization;
 
-
 namespace HW1Strings
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Print some letters:");
             string example = Console.ReadLine();
@@ -18,7 +17,7 @@ namespace HW1Strings
 
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
 
-            String[] words = example.Split(new char[] { ' ' });
+            string[] words = example.Split(new char[] { ' ' });
             for (int i = 0; i < words.Length; i++)
             {
                 if (words[i].Equals("A") || words[i].Equals("For") || words[i].Equals("Upon") ||
@@ -30,8 +29,7 @@ namespace HW1Strings
                     words[i] = words[i].ToLower();
                 }
             }
-
-            example = (String.Join(" ", words));
+            example = (string.Join(" ", words));
             Console.WriteLine(example);
         }
     }
