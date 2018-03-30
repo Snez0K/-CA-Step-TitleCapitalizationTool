@@ -18,9 +18,7 @@ namespace HW1Strings
 
             List<string> list = new List<string>(new string[]
             {
-            "A",  "At", "In", "On", "At",
-            "By", "For","Upon", "After", "Over",
-            "About", "During", "Over", "Till", "Within"
+            "A",  "At", "About", "At", "After", "By", "During" , "In", "For", "On",  "Over", "Till", "Upon", "Within"
             });
             
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
