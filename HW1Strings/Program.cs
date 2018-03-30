@@ -30,7 +30,7 @@ namespace HW1Strings
                         words[i] = words[i].ToLower();
                 }
             }
-            example = (string.Join(" ", words));
+            example = string.Join(" ", words);
             Console.WriteLine(example);
         }
     }
