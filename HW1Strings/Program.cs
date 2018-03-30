@@ -15,11 +15,13 @@ namespace HW1Strings
                 example = example.Replace("  "," ");
             }
 
-            List<string> list = new List<string>(new string[] {
-            "A", "For", "Upon", "After",
-            "Over", "About", "At", "During", "Over",
-            "In", "On", "Till", "Within", "At", "By"});
-
+            List<string> list = new List<string>(new string[]
+            {
+            "A",  "At", "In", "On", "At",
+            "By", "For","Upon", "After", "Over",
+            "About", "During", "Over", "Till", "Within"
+            });
+            
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
             string[] words = example.Split(new char[] { ' ' });
             for (int i = 0; i < words.Length; i++)
