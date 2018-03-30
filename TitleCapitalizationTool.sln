@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW1Strings", "HW1Strings\HW1Strings.csproj", "{AA505E80-73F1-49F6-8770-E0C3234A9DB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TitleCapitalizationTool", "HW1Strings\TitleCapitalizationTool.csproj", "{AA505E80-73F1-49F6-8770-E0C3234A9DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
