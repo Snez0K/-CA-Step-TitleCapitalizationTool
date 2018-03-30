@@ -4,13 +4,13 @@ using System.Globalization;
 
 namespace HW1Strings
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             Console.WriteLine("Print some letters:");
             string example = Console.ReadLine();
-            while (example.Contains("  "))
+            while (example.Contains("  ")|| example.Contains(",  ")|| example.Contains(";   "))
             {
                 example = example.Replace("  "," ");
             }
