@@ -9,6 +9,7 @@ namespace HW1Strings
         private static void Main()
         {
             Console.WriteLine("Print some letters:");
+            Console.ForegroundColor = ConsoleColor.Red;
             string example = Console.ReadLine();
             while (example.Contains("  ")|| example.Contains(",  ")|| example.Contains(";   "))
             {
@@ -33,6 +34,7 @@ namespace HW1Strings
                 }
             }
             example = string.Join(" ", words);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(example);
         }
     }
