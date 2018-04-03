@@ -11,7 +11,7 @@ namespace HW1Strings
             Console.Write("Enter title to capitalize: ");
             Console.ForegroundColor = ConsoleColor.Red;
             string example = Console.ReadLine();
-            while (example.Contains("  ")|| example.Contains(",  ")|| example.Contains(";   "))
+            while (example.Contains("  "))
             {
                 example = example.Replace("  "," ");
             }
