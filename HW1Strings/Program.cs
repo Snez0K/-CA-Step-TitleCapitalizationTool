@@ -39,6 +39,7 @@ namespace HW1Strings
             Console.Write("Capitalized title: ");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(example);
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
