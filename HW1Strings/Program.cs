@@ -22,7 +22,7 @@ namespace HW1Strings
             });
             */
 
-            string[] list = new string[] { "A", "At", "About", "At", "After", "By", "During", "In", "For", "On", "Over", "Till", "Upon", "Within" }; 
+            string[] list = new string[] { "A", "At", "About", "After", "By", "During", "In", "For", "On", "Over", "Till", "Upon", "Within" }; 
 
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
             string[] words = example.Split(new char[] { ' ' });
