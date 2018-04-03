@@ -16,11 +16,14 @@ namespace HW1Strings
                 example = example.Replace("  "," ");
             }
 
-            List<string> list = new List<string>(new string[]
+            /*List<string> list = new List<string>(new string[]
             {
             "A",  "At", "About", "At", "After", "By", "During" , "In", "For", "On",  "Over", "Till", "Upon", "Within"
             });
-            
+            */
+
+            string[] list = new string[] { "A", "At", "About", "At", "After", "By", "During", "In", "For", "On", "Over", "Till", "Upon", "Within" }; 
+
             example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
             string[] words = example.Split(new char[] { ' ' });
             for (int i = 0; i < words.Length; i++)
@@ -32,7 +35,7 @@ namespace HW1Strings
                 }
             }
             example = string.Join(" ", words);
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Capitalized title: ");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(example);
