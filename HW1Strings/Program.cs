@@ -27,11 +27,11 @@ namespace HW1Strings
                 }
             }
             example = string.Join(" ", words);
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write("Capitalized title: ");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(example);
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }
