@@ -33,8 +33,7 @@ namespace HW1Strings
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(example);
                 Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write("Press enter key to continue . . . ");
-                example = Console.ReadLine();
+                Console.WriteLine(" ");
             } while (true);
             }
     }
