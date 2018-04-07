@@ -24,7 +24,9 @@ namespace HW1Strings
                     foreach (string toCheck in list)
                     {
                         if (words[i].Equals(toCheck))
+                        {
                             words[i] = words[i].ToLower();
+                        }
                     }
                 }
                 example = string.Join(" ", words);
