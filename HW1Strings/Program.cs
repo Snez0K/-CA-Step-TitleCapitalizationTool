@@ -9,9 +9,17 @@ namespace HW1Strings
         {
             do
             {
-                Console.Write("Enter title to capitalize: ");
-                Console.ForegroundColor = ConsoleColor.Red;
-                string example = Console.ReadLine();
+                string example;
+                do {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("Enter title to capitalize: ");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    example = Console.ReadLine();
+                    if (String.IsNullOrEmpty(example))
+                    {
+                        Console.Clear();
+                    }
+                } while ( String.IsNullOrEmpty(example));
                 while (example.Contains("  "))
                 {
                     example = example.Replace("  ", " ");
