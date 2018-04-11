@@ -7,8 +7,8 @@ namespace HW1Strings
     {
         private static void Main()
         {
-           do
-           {
+            do
+            {
                 Console.Write("Enter title to capitalize: ");
                 Console.ForegroundColor = ConsoleColor.Red;
                 string example = Console.ReadLine();
@@ -16,7 +16,7 @@ namespace HW1Strings
                 {
                     example = example.Replace("  ", " ");
                 }
-                string[] list = new string[] {"A","About","After","At","By","During","For","In","On","Over","Till","Upon","Within"};
+                string[] list = new string[] { "A", "About", "After", "At", "By", "During", "For", "In", "On", "Over", "Till", "Upon", "Within" };
                 example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
                 string[] words = example.Split(new char[] { ' ' });
                 for (int i = 0; i < words.Length; i++)
@@ -37,6 +37,6 @@ namespace HW1Strings
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.WriteLine(" ");
             } while (true);
-            }
+        }
     }
 }
