@@ -19,7 +19,7 @@ namespace HW1Strings
                     {
                         Console.Clear();
                     }
-                } while ( String.IsNullOrEmpty(example));
+                } while ( example.Equals(""));
                 while (example.Contains("  ") || example.Contains(" ,") || example.Contains(",  "))
                 {
                     example = example.Replace("  ", " ");
