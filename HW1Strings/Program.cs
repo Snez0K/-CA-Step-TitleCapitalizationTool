@@ -20,9 +20,11 @@ namespace HW1Strings
                         Console.Clear();
                     }
                 } while ( String.IsNullOrEmpty(example));
-                while (example.Contains("  "))
+                while (example.Contains("  ") || example.Contains(" ,") || example.Contains(",  "))
                 {
                     example = example.Replace("  ", " ");
+                    example = example.Replace(" ,", ", ");
+                    example = example.Replace(",  ", ", ");
                 }
                 string[] list = new string[] { "A", "About", "After", "At", "By", "During", "For", "In", "On", "Over", "Till", "Upon", "Within" };
                 example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
