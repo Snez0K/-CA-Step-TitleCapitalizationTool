@@ -16,7 +16,7 @@ namespace TitleCapitalizationTool
                     Console.ForegroundColor = ConsoleColor.Red;
                     example = Console.ReadLine();
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    if (String.IsNullOrEmpty(example))
+                    if (string.IsNullOrEmpty(example))
                     {
                         Console.Clear();
                     }
