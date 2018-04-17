@@ -10,7 +10,8 @@ namespace HW1Strings
             do
             {
                 string example;
-                do {
+                do
+                {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write("Enter title to capitalize: ");
                     Console.ForegroundColor = ConsoleColor.Gray;
