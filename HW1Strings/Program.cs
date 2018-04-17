@@ -27,7 +27,7 @@ namespace TitleCapitalizationTool
                     example = example.Replace(" ,", ", ");
                     example = example.Replace(",  ", ", ");
                 }
-                string[] list = new string[] { "A", "About", "After", "At", "By", "During", "For", "In", "On", "Over", "Till", "Upon", "Within" };
+                string[] list = new string[] { "A", "About", "After", "At", "An", "And","But", "By", "During", "For", "In", "Nor", "Of", "On", "Or", "Out" , "Over", "So" , "The", "To" ,"Till", "Up" , "Upon", "Yet" , "Within" };
                 example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
                 string[] words = example.Split(new char[] { ' ' });
                 for (int i = 0; i < words.Length; i++)
