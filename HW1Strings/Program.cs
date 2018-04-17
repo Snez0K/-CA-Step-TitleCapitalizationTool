@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace HW1Strings
+namespace TitleCapitalizationTool
 {
     internal class Program
     {
