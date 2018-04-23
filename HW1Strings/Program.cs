@@ -20,21 +20,26 @@ namespace TitleCapitalizationTool
                     {
                         Console.Clear();
                     }
-                } while ( example.Equals(""));
-                while (example.Contains("  ") || example.Contains(" ,") || example.Contains(",  "))
+                } while (example.Equals(""));
+
+                string[] filter = new string[] { " ", ",", "!", ".", ":", "?" };
+                string temper;
+                for (int i = 0; i < filter.Length; i++)
                 {
-                    example = example.Replace("  ", " ");
-                    example = example.Replace(" ,", ", ");
-                    example = example.Replace(",  ", ", ");
+                    temper = $"{" "}{filter[i]}{" "}";
+                    example = example.Replace(temper, $"{filter[i]}{" "}");
+                    temper = $"{" "}{filter[i]}";
+                    example = example.Replace(temper, $"{filter[i]}{" "}");
                 }
-                string[] list = new string[] { "A", "About", "After", "At", "An", "And","But", "By", "During", "For", "In", "Nor", "Of", "On", "Or", "Out" , "Over", "So" , "The", "To" ,"Till", "Up" , "Upon", "Yet" , "Within" };
+
+                string[] list = new string[] { "A", "About", "After", "At", "An", "And", "But", "By", "During", "For", "In", "Nor", "Of", "On", "Or", "Out", "Over", "So", "The", "To", "Till", "Up", "Upon", "Yet", "Within" };
                 example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
                 string[] words = example.Split(new char[] { ' ' });
                 for (int i = 0; i < words.Length; i++)
                 {
                     foreach (string toCheck in list)
                     {
-                        if (words[i].Equals(toCheck))
+                        if (words[i].Equals(toCheck) && i != 0 && i != words.Length - 1)
                         {
                             words[i] = words[i].ToLower();
                         }
