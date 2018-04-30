@@ -24,7 +24,7 @@ namespace TitleCapitalizationTool
                 do {
                     example = example.Replace("  ", " ");
                 } while (example.Contains("  "));
-;                string[] filter = new string[] { " ", ",", "!", ".", ":", "?", "-" };
+                string[] filter = new string[] { " ", ",", "!", ".", ":", "?", "-" };
                 string temper;
                 for (int i = 0; i < filter.Length; i++)
                 {
