@@ -40,7 +40,7 @@ namespace TitleCapitalizationTool
                 {
                     example = example.Replace("  ", " ");
                 } while (example.Contains("  "));
-                string[] lowercaseWords = new string[] { "A", "About", "After", "At", "An", "And", "But", "By", "During", "For", "In", "Nor", "Of", "On", "Or", "Out", "Over", "So", "The", "To", "Till", "Up", "Upon", "Yet", "Within" };
+                string[] lowercaseWords = new string[] { "A", "At", "An", "And", "But", "By", "For", "In", "Nor", "Of", "On", "Or", "Out", "So", "The", "To", "Up", "Yet" };
                 example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
                 string[] words = example.Split(new char[] { ' ' });
                 for (int i = 0; i < words.Length; i++)
