@@ -10,16 +10,13 @@ namespace TitleCapitalizationTool
             do
             {
                 string example;
+                Console.Write("Enter title to capitalize: ");
+                Console.ForegroundColor = ConsoleColor.Red;
                 do
                 {
-                    Console.Write("Enter title to capitalize: ");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    do
-                    {
-                        example = Console.ReadLine();
-                    } while (string.IsNullOrEmpty(example));
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                } while (example.Equals(""));
+                    example = Console.ReadLine();
+                } while (string.IsNullOrEmpty(example));
+                Console.ForegroundColor = ConsoleColor.Gray;
                 do
                 {
                     example = example.Replace("  ", " ");
