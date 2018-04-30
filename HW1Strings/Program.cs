@@ -17,20 +17,29 @@ namespace TitleCapitalizationTool
                     example = Console.ReadLine();
                 } while (string.IsNullOrEmpty(example));
                 Console.ForegroundColor = ConsoleColor.Gray;
-                do
-                {
-                    example = example.Replace("  ", " ");
-                } while (example.Contains("  "));
+                
                 string[] filter = new string[] { " ", ",", "!", ".", ":", "?", "-" };
                 string changed;
                 for (int i = 0; i < filter.Length; i++)
                 {
-                    changed = $"{" "}{filter[i]}{" "}";
-                    example = example.Replace(changed, $"{filter[i]}{" "}");
-                    changed = $"{" "}{filter[i]}";
-                    example = example.Replace(changed, $"{filter[i]}{" "}");
-                }
+                    if (filter[i] != "-")
+                    {
+                        changed = $"{" "}{filter[i]}{" "}";
+                        example = example.Replace(changed, $"{filter[i]}{" "}");
 
+                        changed = $"{" "}{filter[i]}";
+                        example = example.Replace(changed, $"{filter[i]}{" "}");
+                    }
+                    else
+                    {
+                        changed = $"{" "}{filter[i]}{" "}";
+                        example = example.Replace($"{filter[i]}", changed);
+                    }
+                }
+                do
+                {
+                    example = example.Replace("  ", " ");
+                } while (example.Contains("  "));
                 string[] lowercaseWords = new string[] { "A", "About", "After", "At", "An", "And", "But", "By", "During", "For", "In", "Nor", "Of", "On", "Or", "Out", "Over", "So", "The", "To", "Till", "Up", "Upon", "Yet", "Within" };
                 example = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(example.ToLower());
                 string[] words = example.Split(new char[] { ' ' });
