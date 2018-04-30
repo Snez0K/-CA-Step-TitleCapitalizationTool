@@ -26,13 +26,13 @@ namespace TitleCapitalizationTool
                     example = example.Replace("  ", " ");
                 } while (example.Contains("  "));
                 string[] filter = new string[] { " ", ",", "!", ".", ":", "?", "-" };
-                string temper;
+                string changed;
                 for (int i = 0; i < filter.Length; i++)
                 {
-                    temper = $"{" "}{filter[i]}{" "}";
-                    example = example.Replace(temper, $"{filter[i]}{" "}");
-                    temper = $"{" "}{filter[i]}";
-                    example = example.Replace(temper, $"{filter[i]}{" "}");
+                    changed = $"{" "}{filter[i]}{" "}";
+                    example = example.Replace(changed, $"{filter[i]}{" "}");
+                    changed = $"{" "}{filter[i]}";
+                    example = example.Replace(changed, $"{filter[i]}{" "}");
                 }
 
                 string[] list = new string[] { "A", "About", "After", "At", "An", "And", "But", "By", "During", "For", "In", "Nor", "Of", "On", "Or", "Out", "Over", "So", "The", "To", "Till", "Up", "Upon", "Yet", "Within" };
