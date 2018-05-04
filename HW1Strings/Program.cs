@@ -20,7 +20,7 @@ namespace TitleCapitalizationTool
                     example = Console.ReadLine();
                 } while (string.IsNullOrEmpty(example));
                 Console.ForegroundColor = ConsoleColor.Gray;
-                
+                example = example.Trim();
                 string[] filter = new string[] { " ", ",", "!", ".", ":", "?", "-" };
                 string changed;
                 for (int i = 0; i < filter.Length; i++)
